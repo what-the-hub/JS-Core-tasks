@@ -3,15 +3,22 @@
  * return {boolean}
  */
 var isPalindrome = function (x) {
-    if (x < 0 || (x !== 0 && x % 10 === 0)) return false;
+    let isPositive = x > 0;
+    let isNotZero = x !== 0;
+    let canBeDivided = x % 10 !== 0;
 
-    var reversedNum = 0;
+    let canBePalindrome = isPositive && isNotZero && canBeDivided;
+    if (canBePalindrome) {
+        let reversedNum = 0;
+        while (x > reversedNum) {
+            reversedNum = reversedNum * 10 + x % 10;
+            x = Math.round(x / 10);
+        }
 
-    while (x > reversedNum) {
-        reversedNum = reversedNum * 10 + x % 10;
-        x = ~~(x / 10);
+        return x === reversedNum || x === Math.round(reversedNum / 10);
+    } else {
+        return false;
     }
+}
 
-    return x === reversedNum || x === ~~(reversedNum / 10);
-};
-console.log(isPalindrome(10101));
+console.log(isPalindrome(1332331));
