@@ -4,10 +4,10 @@
  * @return {number}
  */
 
-const numJewelsInStones = function(jewels, stones) {
+const numJewelsInStones = function (jewels, stones) {
     const spreadStones = [...stones]
     const result = spreadStones.filter((stone) => jewels.includes(stone))
-    
+
     return result.length
 };
 
