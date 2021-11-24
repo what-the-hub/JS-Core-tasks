@@ -5,8 +5,8 @@
  */
 
 const numJewelsInStones = function(jewels, stones) {
-    const restStones = [...stones]
-    const result = restStones.filter((stone) => jewels.includes(stone))
+    const spreadStones = [...stones]
+    const result = spreadStones.filter((stone) => jewels.includes(stone))
     
     return result.length
 };
