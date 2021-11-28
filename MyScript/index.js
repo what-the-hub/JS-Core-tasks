@@ -45,7 +45,7 @@ const result = checkEnteredDay(inputDate);
 const showLessInfoDay = (fullDate) => fullDate.toString().slice(0, 10)
 
 let message = `You entered ${showLessInfoDay(inputDateFull)} \nThis is the ${result.day} day of ${result.busyness}`
-message += '\nCheck console if You want to see current month business'
+message += '\nCheck console if You want to see current month schedule'
 alert(message)
 
 const checkEveryDayInMonth = () => {
