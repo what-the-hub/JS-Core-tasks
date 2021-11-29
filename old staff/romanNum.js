@@ -1,5 +1,5 @@
 var romanToInt = function (s) {
-    var dictionary = {
+    const dictionary = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -8,12 +8,11 @@ var romanToInt = function (s) {
         'D': 500,
         'M': 1000
     }
-    let result = 0;
 
-    for (var i = 0; i < s.length; i++) {
+    let result = 0;
+    for (let i = 0; i < s.length; i+=1) {
         const current = dictionary[s[i]];
         const next = dictionary[s[i + 1]];
-
         if (current < next) {
             result += next - current;
             i += 1;
