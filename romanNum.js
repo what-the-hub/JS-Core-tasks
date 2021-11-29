@@ -17,6 +17,6 @@ function romanToInt(s) {
         }
         return accumulator + current;
     }, 0);
-};
+}
 
 console.log(romanToInt('XL'));
