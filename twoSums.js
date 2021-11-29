@@ -8,7 +8,7 @@ let twoSum = function (nums, target) {
     nums.forEach(function (value, index) {
         hashmap.set(value, index);
     })
-    
+
     for (let i in nums) {
         if (hashmap.has(target - nums[i]) && i != hashmap.get(target - nums[i])) {
             return [i * 1, hashmap.get(target - nums[i])];
